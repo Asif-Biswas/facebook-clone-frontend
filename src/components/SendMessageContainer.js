@@ -16,7 +16,7 @@ class SendMessageContainer extends Component {
         }else{
             input = inp
         }
-        var url = 'http://127.0.0.1:8000/myapi/sendmessage/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/sendmessage/'
         var store = JSON.parse(localStorage.getItem('login'))
         fetch(url,{
             method:'POST',

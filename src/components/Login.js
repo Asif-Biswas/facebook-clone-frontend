@@ -52,7 +52,7 @@ class Login extends Component {
     loginClicked=(e)=>{
         this.setState({loading:true})
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/api/rest-auth/login/', {
+        fetch('https://fb-cln-backend.herokuapp.com/api/rest-auth/login/', {
             method: 'POST',
             headers:{
                 'content-type':'application/json',
@@ -80,7 +80,7 @@ class Login extends Component {
     signupClicked=(e)=>{
         this.setState({loading:true})
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/api/rest-auth/registration/', {
+        fetch('https://fb-cln-backend.herokuapp.com/api/rest-auth/registration/', {
             method: 'POST',
             headers:{
                 'content-type':'application/json',

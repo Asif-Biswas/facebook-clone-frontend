@@ -10,7 +10,7 @@ class InviteContainer extends Component {
     }
     inviteClicked=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/invite/'+this.props.id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/invite/'+this.props.id+'/'
         fetch(url,{
             method:'POST',
             headers: {

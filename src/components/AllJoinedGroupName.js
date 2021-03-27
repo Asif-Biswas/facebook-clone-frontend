@@ -10,7 +10,7 @@ class AllJoinedGroupName extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/getalljoinedgroup/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/getalljoinedgroup/?format=json'
         fetch(url,{
             method:'GeT',
             headers: {

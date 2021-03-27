@@ -23,7 +23,7 @@ class UserDetails extends Component {
     componentDidMount(){
         this.setState({counter:this.state.counter+1})
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/userdetails/'+this.state.userId+'/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/userdetails/'+this.state.userId+'/?format=json'
         fetch(url,{
             method:'GET',
             headers: {
@@ -34,7 +34,7 @@ class UserDetails extends Component {
         .then(res=>res.json().then(result=>{
             this.setState({data: result})
         }))
-        var url2 = 'http://127.0.0.1:8000/myapi/checkrelation/'+this.props.userId+'/?format=json'
+        var url2 = 'https://fb-cln-backend.herokuapp.com/myapi/checkrelation/'+this.props.userId+'/?format=json'
         fetch(url2,{
             method:'GET',
             headers: {
@@ -49,7 +49,7 @@ class UserDetails extends Component {
             if(result.response === 'i_requested'){this.setState({cancelRequest:true})}
             if(result.response === 'requested_me'){this.setState({acceptRequest:true})}
         }))
-        var url3 = 'http://127.0.0.1:8000/myapi/usersallpost/'+this.props.userId+'/?format=json&page='+this.state.pageNumber
+        var url3 = 'https://fb-cln-backend.herokuapp.com/myapi/usersallpost/'+this.props.userId+'/?format=json&page='+this.state.pageNumber
         fetch(url3,{
             method:'GET',
             headers: {
@@ -68,7 +68,7 @@ class UserDetails extends Component {
     }
     loadMore=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/usersallpost/'+this.props.userId+'/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/usersallpost/'+this.props.userId+'/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {
@@ -96,7 +96,7 @@ class UserDetails extends Component {
     }
     addFriend=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/addfriend/'+this.props.userId+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/addfriend/'+this.props.userId+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -110,7 +110,7 @@ class UserDetails extends Component {
     }
     cancelRequest=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/cancelfriendrequest/'+this.props.userId+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/cancelfriendrequest/'+this.props.userId+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -124,7 +124,7 @@ class UserDetails extends Component {
     }
     acceptRequest=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/acceptfriendrequest/'+this.props.userId+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/acceptfriendrequest/'+this.props.userId+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -138,7 +138,7 @@ class UserDetails extends Component {
     }
     deleteRequest=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/deletefriendrequest/'+this.props.userId+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/deletefriendrequest/'+this.props.userId+'/'
         fetch(url,{
             method:'POST',
             headers: {

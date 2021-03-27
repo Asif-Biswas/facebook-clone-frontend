@@ -15,7 +15,7 @@ class Home2 extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/allpost/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/allpost/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {
@@ -45,7 +45,7 @@ class Home2 extends Component {
     
     loadMore=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/allpost/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/allpost/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {

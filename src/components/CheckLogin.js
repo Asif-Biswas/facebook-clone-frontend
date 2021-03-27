@@ -21,7 +21,7 @@ class CheckLogin extends Component {
         }
     }
     logOut=()=>{
-        fetch('http://127.0.0.1:8000/api/rest-auth/logout/', {
+        fetch('https://fb-cln-backend.herokuapp.com/api/rest-auth/logout/', {
             method:'POST'
         })
         .then(res=>{

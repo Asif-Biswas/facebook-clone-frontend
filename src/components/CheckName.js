@@ -15,7 +15,7 @@ class CheckName extends Component {
 
     clickHandler=(e)=>{
         e.preventDefault()
-        fetch('http://127.0.0.1:8000/myapi/changename/', {
+        fetch('https://fb-cln-backend.herokuapp.com/myapi/changename/', {
             method: 'PUT',
             headers:{
                 'content-type':'application/json',

@@ -14,9 +14,9 @@ class PostDetails extends Component {
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
         if(this.props.groupsPost){
-            var url = 'http://127.0.0.1:8000/myapi/groupspostdetails/'+this.props.postId+'/?format=json'
+            var url = 'https://fb-cln-backend.herokuapp.com/myapi/groupspostdetails/'+this.props.postId+'/?format=json'
         }else{
-            url = 'http://127.0.0.1:8000/myapi/postdetails/'+this.props.postId+'/?format=json'
+            url = 'https://fb-cln-backend.herokuapp.com/myapi/postdetails/'+this.props.postId+'/?format=json'
         }
         fetch(url,{
             method:'GET',

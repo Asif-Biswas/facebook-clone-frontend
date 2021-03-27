@@ -13,7 +13,7 @@ class InviteToGroup extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/myallfriends/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/myallfriends/?format=json'
         fetch(url,{
             method:'GET',
             headers: {

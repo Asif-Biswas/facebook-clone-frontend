@@ -28,9 +28,9 @@ class SearchResult extends Component {
     }
     searchUser=(fn,ln)=>{
         if(ln===null){
-            var url = 'http://127.0.0.1:8000/myapi/searchuser/?first_name='+fn+'&page='+this.state.upageNumber
+            var url = 'https://fb-cln-backend.herokuapp.com/myapi/searchuser/?first_name='+fn+'&page='+this.state.upageNumber
         }else{
-            url = 'http://127.0.0.1:8000/myapi/searchuser/?first_name='+fn+'&last_name='+ln+'&page='+this.state.upageNumber
+            url = 'https://fb-cln-backend.herokuapp.com/myapi/searchuser/?first_name='+fn+'&last_name='+ln+'&page='+this.state.upageNumber
         }
         let store = JSON.parse(localStorage.getItem('login'))
         fetch(url,{
@@ -57,7 +57,7 @@ class SearchResult extends Component {
     }
     searchGroup=(n)=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/searchgroup/?name='+n+'&page='+this.state.gpageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/searchgroup/?name='+n+'&page='+this.state.gpageNumber
         fetch(url,{
             method:'GET',
             headers: {
@@ -132,9 +132,9 @@ class SearchResult extends Component {
     }
     uloadMore=(fn,ln)=>{
         if(ln===null){
-            var url = 'http://127.0.0.1:8000/myapi/searchuser/?first_name='+fn+'&page='+this.state.upageNumber
+            var url = 'https://fb-cln-backend.herokuapp.com/myapi/searchuser/?first_name='+fn+'&page='+this.state.upageNumber
         }else{
-            url = 'http://127.0.0.1:8000/myapi/searchuser/?first_name='+fn+'&last_name='+ln+'&page='+this.state.upageNumber
+            url = 'https://fb-cln-backend.herokuapp.com/myapi/searchuser/?first_name='+fn+'&last_name='+ln+'&page='+this.state.upageNumber
         }
         let store = JSON.parse(localStorage.getItem('login'))
         fetch(url,{
@@ -159,7 +159,7 @@ class SearchResult extends Component {
         }))
     }
     gloadMore=(n)=>{
-        var url = 'http://127.0.0.1:8000/myapi/searchgroup/?name='+n+'&page='+this.state.gpageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/searchgroup/?name='+n+'&page='+this.state.gpageNumber
         let store = JSON.parse(localStorage.getItem('login'))
         fetch(url,{
             method:'GET',

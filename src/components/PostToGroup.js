@@ -12,7 +12,7 @@ class Post extends Component {
 
     createPost=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/posttogroup/'+this.props.id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/posttogroup/'+this.props.id+'/'
         fetch(url,{
             method:'POST',
             headers: {

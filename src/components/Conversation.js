@@ -16,7 +16,7 @@ class Conversation extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/getmessage/'+this.props.id+'/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/getmessage/'+this.props.id+'/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {
@@ -39,7 +39,7 @@ class Conversation extends Component {
     }
     loadMore=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/getmessage/'+this.props.id+'/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/getmessage/'+this.props.id+'/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {

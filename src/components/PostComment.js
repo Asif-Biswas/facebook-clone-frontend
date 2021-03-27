@@ -14,7 +14,7 @@ class PostComment extends Component {
 
     postComment=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/postcomment/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/postcomment/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -36,7 +36,7 @@ class PostComment extends Component {
 
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/allcomments/'+this.props.post+'/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/allcomments/'+this.props.post+'/?format=json'
         fetch(url,{
             method:'GET',
             headers: {

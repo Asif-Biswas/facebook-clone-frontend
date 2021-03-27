@@ -27,7 +27,7 @@ class Post extends Component {
     csrftoken = this.getCookie('csrftoken');
 
     createPost=()=>{
-        var url = 'http://127.0.0.1:8000/myapi/createpost/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/createpost/'
         fetch(url,{
             method:'POST',
             headers: {

@@ -16,7 +16,7 @@ class GroupCreatorForm extends Component {
     }
     joinGroup=(id)=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/joingroup/'+id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/joingroup/'+id+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -30,7 +30,7 @@ class GroupCreatorForm extends Component {
     }
     createGroup=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/creategroup/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/creategroup/'
         fetch(url,{
             method:'POST',
             headers: {

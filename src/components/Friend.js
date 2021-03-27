@@ -15,7 +15,7 @@ class Friend extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/alluser/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/alluser/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {
@@ -34,7 +34,7 @@ class Friend extends Component {
             }
             this.setState({allUser: result.results, pageNumber:this.state.pageNumber+1, maxPage:maxPage})
         }))
-        var url1 = 'http://127.0.0.1:8000/myapi/requestedme/?format=json'
+        var url1 = 'https://fb-cln-backend.herokuapp.com/myapi/requestedme/?format=json'
         fetch(url1,{
             method:'GET',
             headers: {
@@ -51,7 +51,7 @@ class Friend extends Component {
     }
     loadMore=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/alluser/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/alluser/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {

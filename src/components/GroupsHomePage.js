@@ -19,7 +19,7 @@ class GroupsHomePage extends Component {
     }
     componentDidMount(){
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/groupsdata/'+this.props.groupId+'/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/groupsdata/'+this.props.groupId+'/?format=json'
         fetch(url,{
             method:'GET',
             headers: {
@@ -30,7 +30,7 @@ class GroupsHomePage extends Component {
         .then(res=>res.json().then(result=>{
             this.setState({groupInfo: result})
         }))
-        var url2 = 'http://127.0.0.1:8000/myapi/getgroupspost/'+this.props.groupId+'/?format=json&page='+this.state.pageNumber
+        var url2 = 'https://fb-cln-backend.herokuapp.com/myapi/getgroupspost/'+this.props.groupId+'/?format=json&page='+this.state.pageNumber
         
         //if(this.state.nextPage){
             fetch(url2,{
@@ -52,7 +52,7 @@ class GroupsHomePage extends Component {
     }
     joinGroup=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/joingroup/'+this.props.groupId+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/joingroup/'+this.props.groupId+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -68,7 +68,7 @@ class GroupsHomePage extends Component {
     }
     loadMore=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/getgroupspost/'+this.props.groupId+'/?format=json&page='+this.state.pageNumber
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/getgroupspost/'+this.props.groupId+'/?format=json&page='+this.state.pageNumber
         fetch(url,{
             method:'GET',
             headers: {

@@ -11,7 +11,7 @@ class CancelFriendRequest extends Component {
     }
     remove=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/cancelfriendrequest/'+this.props.id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/cancelfriendrequest/'+this.props.id+'/'
         fetch(url,{
             method:'POST',
             headers: {
@@ -25,7 +25,7 @@ class CancelFriendRequest extends Component {
     }
     add=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/addfriend/'+this.props.id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/addfriend/'+this.props.id+'/'
         fetch(url,{
             method:'POST',
             headers: {

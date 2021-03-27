@@ -24,7 +24,7 @@ class Home extends Component {
         if(store && store.login){
             this.setState({login: true})
         }
-        var url = 'http://127.0.0.1:8000/myapi/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/?format=json'
         fetch(url,{
             method:'GET',
             headers: {
@@ -44,7 +44,7 @@ class Home extends Component {
     }
 
     getapi=()=>{
-        var url = 'http://127.0.0.1:8000/myapi/?format=json'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/?format=json'
         fetch(url,{
             method:'GET',
             headers: {

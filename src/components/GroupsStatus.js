@@ -15,7 +15,7 @@ class GroupsStatus extends Component {
     }
     like=(id)=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/likegroupspost/'+id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/likegroupspost/'+id+'/'
         fetch(url,{
             method:'POST',
             headers:{
@@ -32,7 +32,7 @@ class GroupsStatus extends Component {
     }
     unLlike=(id)=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        var url = 'http://127.0.0.1:8000/myapi/unlikegroupspost/'+id+'/'
+        var url = 'https://fb-cln-backend.herokuapp.com/myapi/unlikegroupspost/'+id+'/'
         fetch(url,{
             method:'POST',
             headers:{

@@ -22,7 +22,7 @@ class Menu extends Component {
         try {
             this.props.logOut()
         } catch  {
-            fetch('http://127.0.0.1:8000/api/rest-auth/logout/', {
+            fetch('https://fb-cln-backend.herokuapp.com/api/rest-auth/logout/', {
                 method:'POST'
             })
             .then(res=>{
@@ -43,7 +43,7 @@ class Menu extends Component {
     }
     changeNameClicked=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
-        fetch('http://127.0.0.1:8000/myapi/changename/', {
+        fetch('https://fb-cln-backend.herokuapp.com/myapi/changename/', {
             method: 'PUT',
             headers:{
                 'content-type':'application/json',
@@ -65,7 +65,7 @@ class Menu extends Component {
     changePassClicked=()=>{
         let store = JSON.parse(localStorage.getItem('login'))
         if(this.state.newPassword===this.state.confirmNewPassword){
-            fetch('http://127.0.0.1:8000/api/change-password/', {
+            fetch('https://fb-cln-backend.herokuapp.com/api/change-password/', {
                 method: 'PUT',
                 headers:{
                     'content-type':'application/json',
