@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../facebook_backend"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../facebook_frontend"
+		}
+	],
+	"settings": {}
+}
